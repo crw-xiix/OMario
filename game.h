@@ -14,7 +14,6 @@ class Camera {
 public:
 	float tx=40, ty=20;
 	float CamX=0, CamY=0;
-	
 	Camera() = default;
 	void Update();
 	void Set(int x, int y);  ///Game pixels, not display pixels
@@ -24,7 +23,6 @@ public:
 class Collide {
 public:
 	enum class Where {Top, Right, Bottom, Left, None};
-//	Where collide(Player player, vector<Object> objects);
 };
 
 class Game {
@@ -41,4 +39,5 @@ public:
 	void Render();
 	void ProcessEvents();
 	bool Running = true;
+	bool Paused = false;
 };
